@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Screwdriver Set",
+        "img": "https://i.ibb.co/prTqn80/Screwdriver.webp",
+        "description": "Screwdrivers can be used for anything from tightening cabinet hardware to installing light switches to opening paint cans. This 10-piece set includes five Phillips and five slotted screwdrivers in common sizes.",
+        "min": "50",
+        "max": "500",
+        "price": "20"
+    },
+    {
+        "_id": 2,
+        "name": "Hammer",
+        "img": "https://i.ibb.co/yhCzYcD/Hammer.webp",
+        "description": "A 16-ounce smooth-faced claw hammer has a nice mix of heft and versatility for driving nails into wood. The angled claw is useful for pulling out the nails that inevitably get bent. This durable model features a fiberglass handle to reduce shock.",
+        "min": "20",
+        "max": "400",
+        "price": "13"
+    },
+    {
+        "_id": 3,
+        "name": "Set of Pliers",
+        "img": "https://i.ibb.co/xFCFPML/Pliers.webp",
+        "description": "Use them to straighten bent power cord plugs, replace old shower heads, slice wiring, and get a good grip on just about anything. This well-made kit from Channellock includes tongue-and-groove, diagonal-cutting, long-nose, and slip-joint pliers.",
+        "min": "30",
+        "max": "350",
+        "price": "52"
+    },
+    {
+        "_id": 4,
+        "name": "Multitool",
+        "img": "https://i.ibb.co/7r4XMQm/Leatherman-Rev-Fanned.webp",
+        "description": "Strapped to your hip or tossed into your glove box, a good multitool keeps knives, pliers, screwdrivers, and other tools close at hand. This pocket-sized model includes 14 tools and comes with a nylon carrying pouch.",
+        "min": "60",
+        "max": "700",
+        "price": "40"
+    },
+    {
+        "_id": 5,
+        "name": "Wheelbarrow",
+        "img": "https://i.ibb.co/8mhfWg9/Wheelbarow.webp",
+        "description": "Come fall or spring, you’ll appreciate its help hauling yard debris. The five-cubic-foot poly tub on this wheelbarrow can carry compost, soil, mulch, and more with ease.",
+        "min": "80",
+        "max": "1000",
+        "price": "92"
+    },
+    {
+        "_id": 6,
+        "name": "Handsaw",
+        "img": "https://i.ibb.co/hCy9yGT/Saw.webp",
+        "description": "Less intimidating and faster to set up than a power saw, this handsaw is good for trimming lumber or molding stock. It has a thick blade and a wide, ergonomic handle.",
+        "min": "75",
+        "max": "780",
+        "price": "15"
+    }
+]
