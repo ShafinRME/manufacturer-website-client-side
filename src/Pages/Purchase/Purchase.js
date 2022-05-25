@@ -8,15 +8,18 @@ const Purchase = () => {
     const { toolsId } = useParams();
     const [user, loading] = useAuthState(auth);
     const [tool, setTool] = useState({});
-    const [values, setValues] = useState(0);
-    const max = parseInt(tool.max);
-    const min = parseInt(tool.min);
 
     const handlePurchase = event => {
         event.preventDefault();
-        const price = event.target.quantity.value;
-        setValues(price);
-        console.log(price);
+        const purchasing = {
+            toolId: tool._id,
+            tool: tool.name,
+            buyerName: user.displayName,
+            buyerEmail: user.email,
+            price: event.target.quantity.value,
+            phone: event.target.phone.value
+
+        }
     }
 
     useEffect(() => {
@@ -45,7 +48,7 @@ const Purchase = () => {
                     <input name="address" placeholder='Address' class="input input-bordered w-full max-w-xs" />
                     <input type="text" name='phone' placeholder="Phone" class="input input-bordered w-full max-w-xs" />
                     <input type="number" name='quantity' placeholder="Quantity" class="input input-bordered w-full max-w-xs" />
-                    <input disabled={values === max} type="submit" value="order" placeholder="Type here" class="btn btn-secondary w-full max-w-xs" />
+                    <input type="submit" value="order" placeholder="Type here" class="btn btn-secondary w-full max-w-xs" />
 
                 </form>
             </div>
