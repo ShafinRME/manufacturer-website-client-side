@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import './Purchase.css';
+import auth from '../../firebase.init';
 
 const Purchase = () => {
     const { toolsId } = useParams();
+    const [user, loading] = useAuthState(auth);
     const [tool, setTool] = useState({});
     const [values, setValues] = useState(0);
     const max = parseInt(tool.max);
@@ -37,8 +40,8 @@ const Purchase = () => {
             </div>
             <div>
                 <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
-                    <input type="text" name='name' placeholder="Your Name" class="input input-bordered w-full max-w-xs" />
-                    <input type="email" name='email' placeholder="Your Email" class="input input-bordered w-full max-w-xs" />
+                    <input type="text" name='name' disabled value={user?.displayName || ''} class="input input-bordered w-full max-w-xs" />
+                    <input type="email" name='email' disabled value={user?.email || ''} class="input input-bordered w-full max-w-xs" />
                     <input name="address" placeholder='Address' class="input input-bordered w-full max-w-xs" />
                     <input type="text" name='phone' placeholder="Phone" class="input input-bordered w-full max-w-xs" />
                     <input type="number" name='quantity' placeholder="Quantity" class="input input-bordered w-full max-w-xs" />

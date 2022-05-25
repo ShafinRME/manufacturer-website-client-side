@@ -11,6 +11,7 @@ import PageNotFound from './Pages/Shared/PageNotFound';
 import Footer from './Pages/Shared/Footer';
 import Purchase from './Pages/Purchase/Purchase';
 import SignUp from './Pages/Authentication/SignUp';
+import AuthRequirement from './Pages/Authentication/AuthRequirement';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/purchase/:toolsId' element={<Purchase></Purchase>}></Route>
+        <Route path='/purchase/:toolsId' element={<AuthRequirement><Purchase></Purchase></AuthRequirement>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
