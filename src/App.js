@@ -9,6 +9,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Login from './Pages/Authentication/Login';
 import PageNotFound from './Pages/Shared/PageNotFound';
 import Footer from './Pages/Shared/Footer';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/purchase/:toolsId' element={<Purchase></Purchase>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>

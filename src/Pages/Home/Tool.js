@@ -1,8 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Tool.css'
 
 const Tool = ({ tool }) => {
     const { _id, name, img, description, min, max, price } = tool;
+    const navigate = useNavigate();
+    const navigateToPurchase = id => {
+        navigate(`/purchase/${id}`);
+    }
     return (
         <div className='inventory-container'>
             <img src={img} alt="" />
@@ -12,7 +17,7 @@ const Tool = ({ tool }) => {
                 <h4 className='text-info mt-4'>Max-Quantity: {max}</h4>
                 <h4 className='text-warning mt-2'>Min-Quantity: {min}</h4>
                 <h5 className='text-primary mt-2 mb-4'>Price: ${price}</h5>
-                <button className='btn inventory-button text-white'>Purchase</button>
+                <button onClick={() => navigateToPurchase(_id)} className='btn inventory-button text-white'>Purchase</button>
             </div>
 
         </div>
