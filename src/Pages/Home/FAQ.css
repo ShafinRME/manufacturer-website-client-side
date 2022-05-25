@@ -1,0 +1,34 @@
+.faq-title {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.faq-ques-ans {
+    margin-top: 250px;
+
+}
+
+.faq-pic img {
+    height: 500px;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 150px;
+}
+
+.accordion-head {
+    font-size: 20px;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 800px) {
+
+    .faq-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
