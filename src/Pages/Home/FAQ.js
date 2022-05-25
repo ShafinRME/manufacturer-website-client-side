@@ -4,7 +4,7 @@ import { Accordion } from 'react-bootstrap';
 
 const FAQ = () => {
     return (
-        <div id="faq" className='mb-5 mt-5'>
+        <div id="faq" className='mb-5 mt-5 container'>
             <h1 className='faq-title'>FAQ about our Service</h1>
 
             <div className="container faq-container">
@@ -73,23 +73,28 @@ const FAQ = () => {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
-                            <Accordion.Header>What is General Relativity in Science ?</Accordion.Header>
+                            <Accordion.Header>What is about Warranty and Gauranty of a Tools ? </Accordion.Header>
                             <Accordion.Body>
-                                General relativity is a theory of gravitation developed by Einstein in the years 1907-1915. The development of general relativity began with the equivalence principle, under which the states of accelerated motion and being at rest in a gravitational field (for example, when standing on the surface of the Earth) are physically identical. The upshot of this is that free fall is inertial motion: an object in free fall is falling because that is how objects move when there is no force being exerted on them, instead of this being due to the force of gravity as is the case in classical mechanics. This is incompatible with classical mechanics and special relativity because in those theories inertially moving objects cannot accelerate with respect to each other, but objects in free fall do so. To resolve this difficulty Einstein first proposed that spacetime is curved. In 1915, he devised the Einstein field equations which relate the curvature of spacetime with the mass, energy, and any momentum within it.
+                                It will vary from tools to tools.Because each tools is different from another tools.For your trusting issue there we are including some Warnenty and Gauranty list of tools.
+                                <ol>
+                                    <li>Wheelbarow - 2 years Warranty</li>
+                                    <li>Pliers - 3 years Warranty</li>
+                                    <li>Hammer - 3 years Gauranty</li>
+                                    <li>Screwdriver - 1 years Warranty</li>
+                                    <li>ToolBox - 4 years Guarnty</li>
+                                </ol>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
-                            <Accordion.Header>What is Big Bang Theory ?</Accordion.Header>
+                            <Accordion.Header>Why you should buy tools from us ?</Accordion.Header>
                             <Accordion.Body>
-                                The Big Bang theory is the prevailing cosmological model explaining the existence of the observable universe from the earliest known periods through its subsequent large-scale evolution.The model describes how the universe expanded from an initial state of high density and temperature,and offers a comprehensive explanation for a broad range of observed phenomena, including the abundance of light elements, the cosmic microwave background (CMB) radiation, and large-scale structure.
-
-                                Crucially, the theory is compatible with Hubble-Lemaître law—the observation that the farther away a galaxy is, the faster it is moving away from Earth. Extrapolating this cosmic expansion backwards in time using the known laws of physics, the theory describes an increasingly concentrated cosmos preceded by a singularity in which space and time lose meaning (typically named "the Big Bang singularity").Detailed measurements of the expansion rate of the universe place the Big Bang singularity at around 13.8 billion years ago, which is thus considered the age of the universe.
+                                You must buy necessary tools from us because since 2000 we are selling our tools to buyers.Since 2000 we have no objection from customers or dealers.Every customers and dealers give us good reviews.You can see these reviews from our reviews section.Just explore our tools universe and get your best tools.
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
                 </div>
                 <div className="faq-pic">
-                    <img src="" alt="" />
+                    <img src="https://i.ibb.co/b50GdBY/FAQ-1.png" alt="" />
 
                 </div>
             </div>
