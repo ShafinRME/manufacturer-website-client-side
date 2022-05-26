@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './Purchase.css';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const Purchase = () => {
     const { toolsId } = useParams();
@@ -20,6 +21,23 @@ const Purchase = () => {
             phone: event.target.phone.value
 
         }
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(purchasing)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    toast(`Successfully You have a ordered ${tool.name}`);
+                }
+                else {
+                    toast(`Failed to ordered ${tool.name}`);
+                }
+            })
     }
 
     useEffect(() => {
