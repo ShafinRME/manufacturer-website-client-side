@@ -60,6 +60,7 @@ const Purchase = () => {
                 </div>
             </div>
             <div>
+                <h2 className='text-center text-3xl text-primary mb-5'>Purchasing Information</h2>
                 <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-3 justify-items-center mt-2'>
                     <input type="text" name='name' disabled value={user?.displayName || ''} class="input input-bordered w-full max-w-xs" />
                     <input type="email" name='email' disabled value={user?.email || ''} class="input input-bordered w-full max-w-xs" />

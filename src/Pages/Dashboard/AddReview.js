@@ -20,7 +20,7 @@ const AddReview = () => {
     };
     return (
         <div className='w-50 mx-auto'>
-            <h2 className='text-center mr-48 mb-6 text-3xl'>Add a Product</h2>
+            <h2 className='text-center mr-48 mb-6 text-3xl'>Add a Review</h2>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2 border-slate-400 input w-full max-w-xs' placeholder='Name' {...register("name")} />
                 <input className='mb-2 border-slate-400 input w-full max-w-xs' placeholder='Photo URL' type="text" {...register("img")} />
