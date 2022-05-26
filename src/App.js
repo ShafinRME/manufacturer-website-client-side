@@ -17,6 +17,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import RequireAdmin from './Pages/Authentication/RequireAdmin';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
+import ManageOrders from './Pages/ManageOrders/ManageOrders';
+import AddProduct from './Pages/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -28,14 +33,14 @@ function App() {
         <Route path='/purchase/:toolsId' element={<AuthRequirement><Purchase></Purchase></AuthRequirement>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='dashboard' element={
-          <AuthRequirement>
-            <Dashboard></Dashboard>
-          </AuthRequirement>
-        }>
+        <Route path='dashboard' element={<AuthRequirement><Dashboard></Dashboard></AuthRequirement>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="admin" element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
+          <Route path="manageproducts" element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
+          <Route path="manageorders" element={<RequireAdmin><ManageOrders></ManageOrders></RequireAdmin>}></Route>
+          <Route path="addproduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
         </Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
