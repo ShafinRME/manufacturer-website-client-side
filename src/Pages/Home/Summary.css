@@ -4,11 +4,13 @@
 }
 
 .stat-summary {
-    background-color: rgba(12, 153, 42, 0.795);
-    font-family: MV Boli;
-    font-weight: 700;
-    color: rgb(200, 240, 25);
-    font-size: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid fuchsia;
+    border-radius: 10px;
+    width: 400px;
+    margin-left: 340px;
 }
 
 .header {
