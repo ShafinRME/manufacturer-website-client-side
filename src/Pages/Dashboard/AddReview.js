@@ -5,7 +5,7 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/reviews`;
+        const url = `https://murmuring-castle-77166.herokuapp.com/reviews`;
         fetch(url, {
             method: 'POST',
             headers: {

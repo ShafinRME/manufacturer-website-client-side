@@ -21,7 +21,7 @@ const Purchase = () => {
             phone: event.target.phone.value
 
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://murmuring-castle-77166.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const Purchase = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/purchase/${toolsId}`;
+        const url = `https://murmuring-castle-77166.herokuapp.com/purchase/${toolsId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data))

@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 
 const ManageOrders = () => {
-    const { data: orders, isLoading } = useQuery('orders', () => fetch('http://localhost:5000/allorders')
+    const { data: orders, isLoading } = useQuery('orders', () => fetch('https://murmuring-castle-77166.herokuapp.com/allorders')
         .then(res => res.json())
     )
 

@@ -6,7 +6,7 @@ import { confirmAlert } from 'react-confirm-alert';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
 const ManageProducts = () => {
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/tools')
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://murmuring-castle-77166.herokuapp.com/tools')
         .then(res => res.json())
     )
     if (isLoading) {
@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? ');
         if (proceed) {
-            fetch(`http://localhost:5000/tools/${id}`, {
+            fetch(`https://murmuring-castle-77166.herokuapp.com/tools/${id}`, {
                 method: 'DELETE',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

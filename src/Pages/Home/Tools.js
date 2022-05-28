@@ -6,7 +6,7 @@ import './Tools.css';
 
 const Tools = () => {
 
-    const { data: tools, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/tools')
+    const { data: tools, isLoading } = useQuery('tools', () => fetch('https://murmuring-castle-77166.herokuapp.com/tools')
         .then(res => res.json())
     )
 

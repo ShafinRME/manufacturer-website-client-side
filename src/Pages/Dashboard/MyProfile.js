@@ -17,7 +17,7 @@ const MyProfile = () => {
             linkedin: event.target.linkedin.value,
 
         }
-        fetch('http://localhost:5000/myself', {
+        fetch('https://murmuring-castle-77166.herokuapp.com/myself', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

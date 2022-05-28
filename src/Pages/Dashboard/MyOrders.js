@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?buyerEmail=${user.email}`, {
+            fetch(`https://murmuring-castle-77166.herokuapp.com/order?buyerEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -43,7 +43,7 @@ const MyOrders = () => {
                             <th>Tools</th>
                             <th>Price</th>
                             <th>Payment</th>
-
+                            <th>TransactionId</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,7 +56,7 @@ const MyOrders = () => {
                                 <td>{(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-xs btn-success'>Pay</button></Link>}</td>
                                 {(order.price && order.paid) && <div>
                                     <p><span className='text-success'>Paid</span></p>
-                                    <p>Transaction id: <span className='text-success'>{order.transactionId}</span></p>
+                                    <p>Transaction id: <span className='text-success'>{order.transectionId}</span></p>
                                 </div>}
                             </tr>)
                         }

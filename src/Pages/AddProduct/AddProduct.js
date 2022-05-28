@@ -5,7 +5,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/tools`;
+        const url = `https://murmuring-castle-77166.herokuapp.com/tools`;
         fetch(url, {
             method: 'POST',
             headers: {
